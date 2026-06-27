@@ -19,16 +19,10 @@ public class ArrayDifference {
         int [] nums2 = {1,1,2,2,2};
         Set<Integer> set1 = new HashSet<Integer>();
         Set<Integer> set2 = new HashSet<Integer>();
-        for(int i = 0; i < nums1.length; i++)
-        {
-            set1.add(nums1[i]);
-        }
 
+        for (int n : nums1) set1.add(n);
+        for (int n : nums2) set2.add(n);
 
-        for(int i = 0; i < nums2.length; i++)
-        {
-            set2.add(nums2[i]);
-        }
         System.out.println(getDifferences(set1, set2));
     }
 }
