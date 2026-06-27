@@ -8,9 +8,8 @@ public class largestNumber {
 
     static String largest(int[] nums) {
         StringBuilder result = new StringBuilder();
-        String[] str = Arrays.stream(nums)
-                .mapToObj(String::valueOf)
-                .toArray(String[]::new);
+        String[] str = new String[nums.length];
+        Arrays.setAll(str, i -> String.valueOf(nums[i]));
 
         Arrays.sort(str, (s1, s2) -> (s2 + s1).compareTo(s1 + s2));
 
